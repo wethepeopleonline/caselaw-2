@@ -4,6 +4,10 @@ This is some very simple SKOS model of basic case law concepts. The concepts wer
 
 The concepts are defined using the [SKOS vocabulary](http://www.w3.org/2009/08/skos-reference/skos.html). 
 
+As you can see so far we only declare some simple relations between the different concepts. This has to be adjusted later but for the moment this must be enough. Note that skos:broader implies also skos:narrower in the other direction. The cool thing is that in RDF you do not have to declare all those relations directly as the machine can do that for you with some smart engines.
+
+The RDF serialization in this example is called [Turtle](http://www.w3.org/TR/turtle/) and is quite human readable. RDF serializations can be converted without loss form one form to the other so you can choose whatever form you prefer.
+
 
 ## Working with triples (shell)
 
