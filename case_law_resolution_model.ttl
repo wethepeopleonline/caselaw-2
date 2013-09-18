@@ -1,0 +1,96 @@
+@base <http://example.org/caselaw/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<sachverhalt>
+    a skos:Concept ;
+    skos:prefLabel "Sachverhalt"@de ;
+    skos:prefLabel "Facts"@en ;
+    skos:scopeNote "" .
+
+<rechtsfrage>
+    a skos:Concept ;
+    skos:prefLabel "Rechtsfrage"@de ;
+    skos:prefLabel "Question presented"@en ;
+    skos:scopeNote "Was gibt es zu klären. Behauptung von jemandem, dass etwas zu lösen ist" .
+
+<entscheid>
+    a skos:Concept ;
+    skos:prefLabel "Entscheid"@de ;
+    skos:prefLabel "Holding"@en ;
+    skos:scopeNote "Ne eat iudex extra petita partium"@lo ;
+    skos:broader <rechtsfrage> ;
+    skos:scopeNote "Recht ist ein Gespräch, der Richter hat das letzte Wort. Der Entscheid ist das letzte Wort, löst den Rechtsstreit (die Rechtsfrage) " .
+
+<argumente>
+    a skos:Concept ;
+    skos:prefLabel "Argumente"@de ;
+    skos:broader <rechtsfrage> ;
+    skos:scopeNote "Kern des " .
+
+<grundsatz>
+    a skos:Concept ;
+    skos:prefLabel "Grundsatz"@de ;
+    skos:broader <argumente> ;
+    skos:scopeNote "LongerDescription" .
+
+<ausnahme>
+    a skos:Concept ;
+    skos:prefLabel "Ausnahme"@de ;
+    skos:broader <grundsatz> ;
+    skos:scopeNote "LongerDescription" .
+
+<anwendungsbereich>
+    a skos:Concept ;
+    skos:prefLabel "Anwendungsbereich"@de ;
+    skos:relation <argumente> ;
+    skos:scopeNote "LongerDescription" .
+
+<voraussetzungen>
+    a skos:Concept ;
+    skos:prefLabel "Voraussetzungen"@de ;
+    skos:broader <argumente> ;
+    skos:broader <rechtsfolge> ;
+    skos:scopeNote "LongerDescription" .
+
+<rechtsfolge>
+    a skos:Concept ;
+    skos:prefLabel "Rechtsfolge"@de ;
+    skos:broader <argumente> ;
+    skos:scopeNote "LongerDescription" .
+
+<rechtsnatur>
+    a skos:Concept ;
+    skos:prefLabel "Rechtsnatur"@de ;
+    skos:relation <argumente> ;
+    skos:scopeNote "LongerDescription" .
+
+<begriff>
+    a skos:Concept ;
+    skos:prefLabel "Begriff"@de ;
+    skos:broader <argumente> ;
+    skos:broader <definition> ;
+    skos:scopeNote "LongerDescription" .
+
+<definition>
+    a skos:Concept ;
+    skos:prefLabel "Definition"@de ;
+    skos:broader <argumente> ;
+    skos:scopeNote "LongerDescription" .
+
+<bemerkungen>
+    a skos:Concept ;
+    skos:prefLabel "Bemerkungen"@de ;
+    skos:prefLabel "Comment"@en ;
+    skos:scopeNote "Kann eine Beziehung zu allem haben, ist noch nicht maschinenlesbar formuliert" .
+
+<obiterdicta>
+    a skos:Concept ;
+    skos:prefLabel "Obiter dicta"@lo ;
+    skos:broader <bemerkungen> ;
+    skos:scopeNote "LongerDescription" .
